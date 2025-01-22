@@ -1,0 +1,101 @@
+@import'../../../../theme/variables';
+
+.contact-us-area {
+    padding-top: 20px;
+    padding-inline: 30px;
+
+    .container {
+        transform: translateY(50px);
+        transition: all 0.7s linear;
+
+        &.active-animation {
+            transform: translateY(0px);
+        }
+    }
+
+    .contact-us-main {
+        background-color: $color-white;
+        text-align: center;
+        padding: 47px 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        h3 {
+            color: #000;
+            font-family: $font-en-manrope;
+            font-size: 35px;
+            line-height: 120%;
+            font-style: normal;
+            letter-spacing: -0.3px;
+            font-weight: 600;
+            max-width: 590px;
+            margin-inline: auto !important;
+            margin-bottom: 23px !important;
+        }
+
+        button {
+            background-color: transparent;
+            padding: 10px 25px;
+            box-sizing: border-box;
+            border-radius: 25px;
+            max-width: 170px;
+            width: 100%;
+            margin-inline: auto;
+            display: block;
+            color: #000000;
+            font-family: $font-en-manrope;
+            font-size: 16px;
+            outline: none;
+            border: 1px solid #212121;
+            transition: all 0.14s linear;
+
+            &:hover {
+                color: #fff;
+                border-color: #212121;
+                background-color: #212121;
+            }
+        }
+    }
+}
+
+@media(max-width:900px) {
+    .contact-us-area {
+        padding-inline: 15px;
+        padding-top: 10px;
+
+        .contact-us-main {
+            h3 {
+                font-size: 30px;
+                line-height: 120%;
+            }
+
+            button {
+                max-width: 160px;
+                padding-block: 9px;
+            }
+        }
+    }
+}
+
+@media(max-width:600px) {
+    .contact-us-area {
+        padding-inline: 15px;
+        padding-top: 10px;
+
+        .contact-us-main {
+            padding: 30px 20px;
+
+            h3 {
+                font-size: 20px;
+                line-height: 120%;
+                margin-bottom: 15px !important;
+            }
+
+            button {
+                font-size: 15px;
+                line-height: 20px;
+                padding: 9px 20px;
+            }
+        }
+    }
+}

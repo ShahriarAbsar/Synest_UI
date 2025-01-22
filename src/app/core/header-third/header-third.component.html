@@ -1,0 +1,41 @@
+<header class="header-second" [class.active]="true">
+  <div class="container">
+    <div class="header-second-child">
+      <div class="header-second-child-left">
+        <div class="header-second-logo" routerLink="/" fragment="homeSyNest" style="cursor: pointer;">
+          <img class="white" src="./assets/images/brand/logo/synest-white-logo.png" alt="" />
+          <img class="black" src="./assets/images/brand/logo/synest-black-logo.png" alt="" />
+        </div>
+
+        <div class="header-second-text" routerLink="/our-service" style="cursor: pointer;">
+          <h1>Healthcare Solutions</h1>
+        </div>
+      </div>
+
+      <div class="header-second-child-right">
+        <ul>
+          <li>
+            <a routerLink="/medical-service-details" routerLinkActive="active"> Medical Grade Monitors </a>
+          </li>
+          <li>
+            <a routerLink="/curator-service-details" routerLinkActive="active"> CuratOR </a>
+          </li>
+          <li>
+            <a routerLink="/medical-product-details" routerLinkActive="active"> Medical Product </a>
+          </li>
+        </ul>
+
+        <button type="button" (click)="onOpenSlider()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <!-- END! header-second-child -->
+  </div>
+</header>
+<!-- END! header-second -->
+
+<app-header-sidebar #headerSidebar></app-header-sidebar>
+<!-- END! header-sidebar -->

@@ -1,0 +1,190 @@
+@import "../../../theme/variables";
+section {
+  margin-top: 2.5rem;
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  .title {
+    color: #000;
+    text-align: center;
+    font-family: $font-en-helvetica;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 105%; /* 3.15rem */
+
+    @media (max-width: 1200px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      font-size: 1.75rem;
+    }
+    @media (max-width: 650px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .article-container {
+    margin-top: 3.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3.12rem;
+    column-gap: 1.25rem;
+    margin-bottom: 7.5rem;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 670px) {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 2rem;
+    }
+
+    .article-card {
+      .article-img {
+        border-radius: 0.625rem;
+        img {
+          width: 100%;
+          border-radius: 0.625rem;
+          aspect-ratio: 33.75/35.875;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .article-info {
+        margin-top: 1.25rem;
+        .article-title {
+          color: #000;
+          font-family: $font-en-helvetica;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%; /* 1.5rem */
+          letter-spacing: -0.01375rem;
+          text-transform: capitalize;
+
+          @media (max-width: 600px) {
+            font-size: 0.875rem;
+          }
+        }
+        .article-date {
+          display: inline-block;
+          margin-top: 0.5rem;
+          color: #404040;
+          font-family: $font-en-helvetica;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%; /* 1.2rem */
+          letter-spacing: -0.011rem;
+          text-transform: capitalize;
+          @media (max-width: 600px) {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    .review-card {
+      color: #000;
+
+      font-family: $font-en-helvetica;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 127%; /* 1.5875rem */
+      letter-spacing: -0.01375rem;
+
+      padding: 2.06rem;
+      background-color: #ffffff;
+      border-radius: 0.625rem;
+
+      @media (max-width: 600px) {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+
+      .article-video {
+        width: 100%;
+        border-radius: 0.625rem;
+        iframe {
+          aspect-ratio: 16/9;
+          width: 100%;
+          border: 0px;
+          border-radius: 0.625rem;
+        }
+      }
+      .article-info {
+        margin-top: 1.25rem;
+        .article-title {
+          color: #000;
+          font-family: $font-en-helvetica;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%; /* 1.5rem */
+          letter-spacing: -0.01375rem;
+          text-transform: capitalize;
+
+          @media (max-width: 600px) {
+            font-size: 0.875rem;
+          }
+        }
+        .article-date {
+          display: inline-block;
+          margin-top: 1.5rem;
+          color: #404040;
+          font-family: $font-en-helvetica;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%; /* 1.2rem */
+          letter-spacing: -0.011rem;
+          text-transform: capitalize;
+          @media (max-width: 600px) {
+            font-size: 0.875rem;
+          }
+        }
+      }
+      .product {
+        margin-top: 3rem !important;
+        @media (max-width: 600px) {
+          margin-top: 1rem !important;
+        }
+      }
+
+      .reviewer {
+        margin-top: 1.06rem !important;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        @media (max-width: 600px) {
+          font-size: 1rem;
+          margin-top: 0.8rem !important;
+        }
+      }
+      .content {
+        margin-top: 2.3rem !important;
+        font-size: 1.25rem;
+        @media (max-width: 600px) {
+          font-size: 1rem;
+          margin-top: 1.44rem !important;
+        }
+      }
+      .date {
+        display: inline-block;
+        margin-top: 5.75rem;
+        font-size: 0.875rem;
+        color: #404040;
+        @media (max-width: 600px) {
+          margin-top: 1.44rem !important;
+          margin-bottom: 0.5rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

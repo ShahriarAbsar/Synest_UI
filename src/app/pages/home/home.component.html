@@ -1,0 +1,159 @@
+<!--- START AREA MAIN AREA -->
+<main>
+
+  <section class="hero-area">
+    <div class="welcome-section" *ngIf="!homeTopAnimation">
+      <div class="logo-image">
+        <img src="../../assets/images/brand/logo/synest-red-logo.png" alt="logo red">
+      </div>
+    </div>
+    <div class="logo-image" [ngClass]="{'logo-image-top':homeTopAnimation}">
+      <img src="../../../assets/images/brand/logo/synest-white-logo.png" alt="logo red">
+    </div>
+
+    <h3 class="hero-tag" [ngClass]="{'show-opacity-hidden-element':showHeroHiddenElems}">Leading in Bangladesh with cutting-edge medical equipment,
+      advanced security solutions, and <br> high-end display technologies.</h3>
+    <div class="home-banner-area-text-button" [ngClass]="{'show-opacity-hidden-element':showHeroHiddenElems}" (click)="scrollHandle('homeSyNest')">
+      <button type="button"  class="bounce">
+        <img src="./assets/images/brand/icon/arrow-bottom.png" alt="arrow-bottom" />
+      </button>
+    </div>
+  </section>
+
+  <section class="banner-area" #homeSyNest id="homeSyNest">
+    <div class="container">
+      <div class="banner-area-child">
+        <div class="banner-area-child-top animate-mission-home-second-first" data-animate="false">
+          <div class="banner-area-child-logo">
+            <img src="./assets/images/brand/logo/synest-black-logo.png" alt="synest-logo" />
+          </div>
+          <div class="banner-area-child-title">
+            <h1>Empowering Healthcare, Security, and Visual Excellence</h1>
+          </div>
+        </div>
+
+        <div class="banner-main">
+          <div class="banner-card-main">
+            <div class="banner-card" routerLink="/our-service">
+              <div class="banner-card-img">
+                <img src="./assets/images/temp/png/home1.png" alt="" />
+                <div class="res-img">
+                  <img src="./assets/images/temp/png/home1_mob.png" alt="" />
+                </div>
+              </div>
+              <div class="banner-card-body">
+                <img src="./assets/images/brand/logo/synest-white-logo.png" alt="logo" />
+
+                <h3>healthcare Solutions</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="banner-card-main">
+            <div class="banner-card" routerLink="/security-service">
+              <div class="banner-card-img">
+                <img src="./assets/images/temp/png/home2.png" alt="" />
+                <div class="res-img">
+                  <img src="./assets/images/temp/png/home2_mob.png" alt="" />
+                </div>
+              </div>
+              <div class="banner-card-body">
+                <img src="./assets/images/brand/logo/synest-white-logo.png" alt="logo" />
+
+                <h3>Security Solutions</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="banner-card-main">
+            <div class="banner-card" routerLink="/high-end-display-details">
+              <div class="banner-card-img">
+                <img src="./assets/images/temp/png/home3.png" alt="" />
+                <div class="res-img">
+                  <img src="./assets/images/temp/png/home3_mob.png" alt="" />
+                </div>
+              </div>
+              <div class="banner-card-body">
+                <img src="./assets/images/brand/logo/synest-white-logo.png" alt="logo" />
+
+                <h3>Display Solutions</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-area" id="blog">
+    <div class="container">
+      <div class="blog-banner">
+        <img src="../../../assets/images/brand/png/home-blog-area/blog-banner.png" alt="Banner">
+      </div>
+
+      <div class="blog-intro-area">
+        <p class="blog-intro">Join Our Journey: 25 Years of Transforming Healthcare and Security with Visual Excellence
+        </p>
+        <a [routerLink]="['/','journey']"><button class="readmore-btn">Read More</button></a>
+      </div>
+
+      <div class="banner-area-header" id="blogCards">
+        <p>Explore Our Latest Updates</p>
+      </div>
+
+      <div class="banner-main">
+        <div class="banner-card-main">
+          <div class="banner-card" routerLink="/press">
+            <div class="banner-card-img">
+              <img src=".\assets\images\brand\png\home-blog-area\press-thumb.png" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="banner-card-body">
+              <h3>Press</h3>
+              <p>Stay updated with the latest news, press releases, and media resources from Synest. Discover our recent
+                activities,
+                innovations, and industry impact here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-card-main">
+          <div class="banner-card" routerLink="/conference">
+            <div class="banner-card-img">
+              <img src=".\assets\images\brand\png\home-blog-area\conference-thumb.png" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="banner-card-body">
+              <h3>Conference</h3>
+              <p>Explore upcoming and past conferences hosted by Synest, where we share insights, innovations, and
+                advancements in
+                healthcare, security, and visual excellence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-card-main">
+          <div class="banner-card" routerLink="/review">
+            <div class="banner-card-img">
+              <img src=".\assets\images\brand\png\home-blog-area\review-thumb.png" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="banner-card-body">
+              <h3>Review</h3>
+              <p>Read testimonials and reviews from clients and partners about their experiences with Synest, showcasing
+                our commitment
+                to excellence in healthcare, security, and visual technology.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <app-contact-us></app-contact-us>
+</main>

@@ -1,0 +1,112 @@
+<app-header-second></app-header-second>
+<!-- END! header-second -->
+
+<!--- START AREA MAIN AREA -->
+<main>
+  <div class="our-service-main-banner-slider">
+    <swiper [speed]="800" [slidesPerView]="1" [navigation]="false" [loop]="false" [autoplay]="false" [spaceBetween]="0"
+      [grabCursor]="true" [pagination]="{
+      clickable: true,
+      }" class="carousel service-carousel-slider">
+      <ng-template swiperSlide *ngFor="let data of [0]">
+        <div class="our-service-main-banner-slider-card">
+          <div class="our-service-main-banner-slider-card-img">
+            <img src="./assets/images/brand/png/service-one.png" alt="service-one" />
+          </div>
+          <!-- END! our-service-main-banner-slider-card-img -->
+
+          <div class="our-service-main-banner-slider-card-details">
+            <div class="container">
+              <div class="our-service-main-banner-slider-card-details-child">
+                <img src="./assets/images/brand/logo/eizo-logo.png" alt="eizo-logo" />
+                <h1>
+                  EIZO’s medical image reproduction solutions stand out thanks
+                  to their outstanding image quality for precise diagnoses.
+                </h1>
+              </div>
+            </div>
+          </div>
+          <!-- END! our-service-main-banner-slider-card-details -->
+        </div>
+      </ng-template>
+    </swiper>
+
+    <div class="bottom-arrow-button">
+      <button type="button" class="bounce" (click)="scrollHandle('serviceSyNest')">
+        <img src="./assets/images/brand/icon/arrow-bottom.png" alt="arrow-bottom" />
+      </button>
+    </div>
+  </div>
+
+  <div class="our-service-area" #serviceSyNest>
+    <div class="container">
+      <div class="our-service-area-description">
+        <p>
+          Select from the following categories to explore our state of the art
+          healthcare equipments
+        </p>
+      </div>
+
+      <div class="our-service-main">
+        <div class="service-card" routerLink="/medical-service-details">
+          <div class="service-card-image">
+            <img src="./assets/images/temp/png/health-care-4.png" alt="" />
+          </div>
+          <!-- END! service-card-image -->
+
+          <div class="service-card-details">
+            <h3>Medical Grade Monitors</h3>
+            <p>
+              EIZO’s medical image reproduction solutions stand out thanks to
+              their outstanding image quality for precise diagnoses.
+            </p>
+            <div class="service-card-btn">
+              <button>Explore</button>
+            </div>
+          </div>
+          <!-- END! service-card-details -->
+        </div>
+
+        <div class="service-card" routerLink="/curator-service-details">
+          <div class="service-card-image">
+            <img src="./assets/images/temp/png/health-care-5.png" alt="" />
+          </div>
+          <!-- END! service-card-image -->
+
+          <div class="service-card-details">
+            <h3>CuratOR</h3>
+            <p>
+              Powerful image reproduction and video management technology meets
+              expertise and experience in the OR
+            </p>
+            <div class="service-card-btn">
+              <button>Explore</button>
+            </div>
+          </div>
+          <!-- END! service-card-details -->
+        </div>
+        <div class="service-card" routerLink="/medical-product-details">
+          <div class="service-card-image">
+            <img src="./assets/images/temp/png/health-care-6.png" alt="" />
+          </div>
+          <!-- END! service-card-image -->
+
+          <div class="service-card-details">
+            <h3>Medical Product</h3>
+            <p>
+              At Synest, we offer high-quality, rigorously tested medical products from trusted manufacturers, with
+              expert support and
+              competitive pricing.
+            </p>
+            <div class="service-card-btn">
+              <button>Explore</button>
+            </div>
+          </div>
+          <!-- END! service-card-details -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-contact-us></app-contact-us>
+</main>

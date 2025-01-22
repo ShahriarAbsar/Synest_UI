@@ -1,0 +1,85 @@
+<app-header [headerText]="headerTitle" [link]="headerlink"></app-header>
+<section>
+    <div class="container">
+        <div class="banner-img">
+            <img src="{{ selectedItem.img }}" alt="banner">
+        </div>
+        <div class="article-info">
+            <h3 class="article-title">{{ selectedItem.title }}</h3>
+            <span class="article-date">{{ selectedItem.date }}</span>
+        </div>
+
+        <div class="paragraph-container">
+            <div class="col-1">
+                <ng-container *ngFor="let item of selectedItem.paragraphs;let idx=index">
+                    <div class="paragraph" *ngIf="idx<column_paragraph_number">
+                        <h3 *ngIf="item.title">{{ item.title }}</h3>
+                        <p>{{ item.content }}</p>
+                    </div>
+                </ng-container>
+
+            </div>
+            <div class="col-2">
+                <ng-container *ngFor="let item of selectedItem.paragraphs;let idx=index">
+                    <div class="paragraph" *ngIf="idx>=column_paragraph_number">
+                        <h3 *ngIf="item.title">{{ item.title }}</h3>
+                        <p>{{ item.content }}</p>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a [routerLink]="['/',selectedType,previous]" *ngIf="previous>=0">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <g id="Group">
+                            <path id="Vector"
+                                d="M4.99997 8.00003C4.9999 7.93436 5.01281 7.86933 5.03795 7.80866C5.06309 7.748 5.09997 7.6929 5.14647 7.64653L10.1465 2.64653C10.3418 2.45116 10.6582 2.45116 10.8535 2.64653C11.0487 2.84191 11.0488 3.15828 10.8535 3.35353L6.20697 8.00003L10.8535 12.6465C11.0488 12.8419 11.0488 13.1583 10.8535 13.3535C10.6581 13.5488 10.3417 13.5489 10.1465 13.3535L5.14647 8.35353C5.09997 8.30716 5.06309 8.25206 5.03795 8.1914C5.01281 8.13073 4.9999 8.0657 4.99997 8.00003Z" />
+                        </g>
+                    </g>
+                </svg>
+                <span>Previous</span>
+            </a>
+            <span *ngIf="previous<0">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <g id="Group">
+                            <path id="Vector"
+                                d="M4.99997 8.00003C4.9999 7.93436 5.01281 7.86933 5.03795 7.80866C5.06309 7.748 5.09997 7.6929 5.14647 7.64653L10.1465 2.64653C10.3418 2.45116 10.6582 2.45116 10.8535 2.64653C11.0487 2.84191 11.0488 3.15828 10.8535 3.35353L6.20697 8.00003L10.8535 12.6465C11.0488 12.8419 11.0488 13.1583 10.8535 13.3535C10.6581 13.5488 10.3417 13.5489 10.1465 13.3535L5.14647 8.35353C5.09997 8.30716 5.06309 8.25206 5.03795 8.1914C5.01281 8.13073 4.9999 8.0657 4.99997 8.00003Z" />
+                        </g>
+                    </g>
+                </svg>
+                <span>Previous</span>
+            </span>
+            <a [routerLink]="['/',selectedType,next]" *ngIf="next>=0">
+
+                <span>Next</span>
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <g id="Group">
+                            <path id="Vector"
+                                d="M11 7.99997C11.0001 8.06564 10.9872 8.13067 10.9621 8.19134C10.9369 8.252 10.9 8.3071 10.8535 8.35347L5.85353 13.3535C5.65816 13.5488 5.34178 13.5488 5.14653 13.3535C4.95128 13.1581 4.95116 12.8417 5.14653 12.6465L9.79303 7.99997L5.14653 3.35347C4.95116 3.15809 4.95116 2.84172 5.14653 2.64647C5.34191 2.45122 5.65828 2.45109 5.85353 2.64647L10.8535 7.64647C10.9 7.69284 10.9369 7.74794 10.9621 7.8086C10.9872 7.86927 11.0001 7.9343 11 7.99997Z" />
+                        </g>
+                    </g>
+                </svg>
+
+            </a>
+            <span *ngIf="next<0">
+
+                <span>Next</span>
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <g id="Group">
+                            <path id="Vector"
+                                d="M11 7.99997C11.0001 8.06564 10.9872 8.13067 10.9621 8.19134C10.9369 8.252 10.9 8.3071 10.8535 8.35347L5.85353 13.3535C5.65816 13.5488 5.34178 13.5488 5.14653 13.3535C4.95128 13.1581 4.95116 12.8417 5.14653 12.6465L9.79303 7.99997L5.14653 3.35347C4.95116 3.15809 4.95116 2.84172 5.14653 2.64647C5.34191 2.45122 5.65828 2.45109 5.85353 2.64647L10.8535 7.64647C10.9 7.69284 10.9369 7.74794 10.9621 7.8086C10.9872 7.86927 11.0001 7.9343 11 7.99997Z" />
+                        </g>
+                    </g>
+                </svg>
+
+            </span>
+        </div>
+
+    </div>
+</section>
+<app-contact-us></app-contact-us>

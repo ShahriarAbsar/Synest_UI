@@ -1,0 +1,56 @@
+<app-header [headerText]="headerTitle" [link]="headerlink" fragment="blogCards"></app-header>
+
+
+<section>
+    <div class="container">
+        <h1 class="title">
+            {{ page_title }}
+        </h1>
+        <div class="article-container">
+            <ng-container *ngIf="selectedType!='review';else reviewCard">
+                <a class="article-card" *ngFor="let item of data;let idx=index" [routerLink]="['/',selectedType,idx]">
+                    <div class="article-img">
+                        <img src="{{ item.img }}" alt="article Img">
+                    </div>
+                    <div class="article-info">
+                        <h3 class="article-title">{{ item.truncated_title }}</h3>
+                        <span class="article-date">{{ item.date }}</span>
+                    </div>
+                </a>
+            </ng-container>
+
+            <ng-template #reviewCard>
+                <div class="review-card" *ngFor="let item of data;let idx=index">
+                    <ng-container *ngIf="item.type=='video'">
+                        <div class="article-video">
+                            <iframe [src]="item.url" title="{{ item.title }}"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="article-info">
+                            <h3 class="article-title">{{ item.title }}</h3>
+                            <span class="article-date">{{ item.date }}</span>
+                        </div>
+
+                    </ng-container>
+                    <ng-container *ngIf="item.type=='written'">
+                        <p class="product">{{ item.product }}</p>
+                        <h3 class="reviewer">{{ item.reviewer }}</h3>
+                        <p class="content">{{ item.content }}</p>
+                        <span class="date">{{ item.date }}</span>
+                    </ng-container>
+
+
+
+                </div>
+            </ng-template>
+
+
+
+        </div>
+
+    </div>
+</section>
+
+<app-contact-us></app-contact-us>

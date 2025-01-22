@@ -1,0 +1,208 @@
+@import './fonts';
+@import './variables';
+
+
+/*** 1. Default Css  ***/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: $color-black;
+  font-family: $font-en-primary;
+  font-style: normal;
+  background-color: #F6F6F6;
+  font-weight: 500;
+  font-size: $font-dis-size;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  display: block;
+  color: $color-black;
+  font-family: $font-en-primary;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 !important;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container {
+  max-width: $container-max-width;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+
+/*** 2. Reusable Css  ***/
+.transition {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+
+/* --- bottom-arrow-button --- */
+.bottom-arrow-button {
+  position: absolute;
+  bottom: 70px;
+  z-index: 11;
+  transform: translateX(-50%);
+  max-width: 1660px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  left: 50%;
+  padding-right: 21px;
+
+  button {
+    min-width: 63px;
+    max-width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    background: #fff;
+
+    img {
+      min-width: 27px;
+      max-width: 27px;
+      height: 27px;
+      object-fit: contain;
+    }
+  }
+}
+
+.bounce {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+  70% {
+    transform: translateY(0%);
+  }
+
+  80% {
+    transform: translateY(-15%);
+  }
+
+  90% {
+    transform: translateY(0%);
+  }
+
+  95% {
+    transform: translateY(-7%);
+  }
+
+  97% {
+    transform: translateY(0%);
+  }
+
+  99% {
+    transform: translateY(-3%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width:1600px) {
+  .bottom-arrow-button {
+    right: 21px;
+
+    button {
+      min-width: 52px;
+      max-width: 52px;
+      height: 52px;
+
+      img {
+        min-width: 22px;
+        max-width: 22px;
+        height: 22px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width:1600px) {
+  .bottom-arrow-button {
+    button {
+      min-width: 44px;
+      max-width: 44px;
+      height: 44px;
+
+      img {
+        min-width: 21px;
+        max-width: 21px;
+        height: 21px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width:600px) {
+  .bottom-arrow-button {
+    bottom: 124px;
+  }
+}
+
+@media (max-width:430px) {
+  .bottom-arrow-button {
+    button {
+      min-width: 33px;
+      max-width: 33px;
+      height: 33px;
+
+      img {
+        min-width: 17px;
+        max-width: 17px;
+        height: 17px;
+        object-fit: contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<aside class="header-sidebar" [class.open]="isToggle">
+  <div class="header-sidebar-lists">
+    <div class="cross-button">
+      <button type="button" (click)="onIsToggle()">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="header-sidebar-list">
+      <div class="header-sidebar-list-title">
+        <h1 routerLink="/our-service" routerLinkActive="active">Healthcare Solutions</h1>
+      </div>
+
+      <div class="header-sidebar-list-main">
+        <ul>
+          <li>
+            <a routerLink="/medical-service-details" routerLinkActive="active">Medical Grade Monitors</a>
+          </li>
+
+          <li>
+            <a routerLink="/curator-service-details" routerLinkActive="active">CuratOR</a>
+          </li>
+          <li>
+            <a routerLink="/medical-product-details" routerLinkActive="active"> Medical Product </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- END! header-sidebar-list -->
+
+    <div class="header-sidebar-list">
+      <div class="header-sidebar-list-title">
+        <h1 routerLink="/security-service" routerLinkActive="active">Security Solutions</h1>
+      </div>
+
+      <div class="header-sidebar-list-main">
+        <ul>
+          <li>
+            <a routerLink="/security-service-details" routerLinkActive="active">Security & Surveillance</a>
+          </li>
+
+          <li>
+            <a routerLink="/access-service-details" routerLinkActive="active">Access control</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- END! header-sidebar-list -->
+
+    <div class="header-sidebar-list">
+      <div class="header-sidebar-list-title">
+        <h1 routerLink="/high-end-display-details" routerLinkActive="active">Display Solutions</h1>
+      </div>
+
+      <div class="header-sidebar-list-main">
+        <ul>
+          <li>
+            <a routerLink="/high-end-display-details" routerLinkActive="active">All display solutions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- END! header-sidebar-list -->
+  </div>
+  <!-- END! header-sidebar-lists -->
+</aside>
+<!-- END! header-sidebar -->
+
+<div class="overlay" [class.open]="isToggle" (click)="onIsToggle()"></div>
+<!-- END! overlay -->

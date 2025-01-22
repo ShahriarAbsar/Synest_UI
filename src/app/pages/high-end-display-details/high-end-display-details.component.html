@@ -1,0 +1,212 @@
+<app-header-second-display></app-header-second-display>
+<!---- END HEADER AREA --->
+
+<main>
+  <div class="our-service-main-banner-slider">
+    <swiper
+      [speed]="800"
+      [slidesPerView]="1"
+      [navigation]="false"
+      [loop]="false"
+      [autoplay]="false"
+      [spaceBetween]="0"
+      [grabCursor]="true"
+      [pagination]="{
+            clickable: true,
+            }"
+      class="carousel service-carousel-slider"
+    >
+      <ng-template swiperSlide *ngFor="let data of [0]">
+        <div class="our-service-main-banner-slider-card">
+          <div class="our-service-main-banner-slider-card-img">
+            <img
+              src="./assets/images/temp/png/changed_hero_images/High.png"
+              alt="service-one"
+            />
+          </div>
+          <!-- END! our-service-main-banner-slider-card-img -->
+
+          <div class="our-service-main-banner-slider-card-details">
+            <div class="container">
+              <div class="our-service-main-banner-slider-card-details-child">
+                <img
+                  src="./assets/images/brand/logo/eizo-logo.png"
+                  alt="eizo-logo"
+                />
+                <h1>
+                  Elevate Your Viewing Experience, Explore Our Range of
+                  High-Quality Monitors for Every Need from EIZO.
+                </h1>
+              </div>
+            </div>
+          </div>
+          <!-- END! our-service-main-banner-slider-card-details -->
+        </div>
+      </ng-template>
+    </swiper>
+
+    <div class="bottom-arrow-button">
+      <button
+        type="button"
+        class="bounce"
+        (click)="scrollHandle('serviceSyNest')"
+      >
+        <img
+          src="./assets/images/brand/icon/arrow-bottom.png"
+          alt="arrow-bottom"
+        />
+      </button>
+    </div>
+  </div>
+  <section class="service-area" #serviceSyNest>
+    <div class="container">
+      <div class="service-area-top">
+        <!-- <img src="./assets/images/brand/logo/logo-1.svg" alt=""> -->
+        <h3>Display Solutions</h3>
+        <p>
+          Our Manufacturer stands as a beacon of quality, embodying excellence
+          in every product,Driven by innovation, they pioneer advanced
+          technologies in imaging solutions.
+        </p>
+      </div>
+
+      <div class="service-main">
+        <div class="service-card">
+          <div class="service-card-top">
+            <img src="../../../assets/images/brand/logo/EzioLogo2.png" alt="" />
+            <h3>Business Monitors</h3>
+            <p>
+              A brilliant collection of business monitors with the promise to
+              elevate your workspace
+            </p>
+          </div>
+          <div class="service-card-img">
+            <img src="./assets/images/temp/png/display1.png" alt="" />
+          </div>
+          <div class="service-card-btn">
+            <a
+              href="https://www.eizo.eu/office-monitors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>View Collection</button>
+            </a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-top">
+            <img src="../../../assets/images/brand/logo/EzioLogo2.png" alt="" />
+            <h3>Color Management Monitors</h3>
+            <p>
+              Colors like you have never seen before - these color management
+              monitors are a must have for all designers.
+            </p>
+          </div>
+          <div class="service-card-img">
+            <img src="./assets/images/temp/png/display2.png" alt="" />
+          </div>
+          <div class="service-card-btn">
+            <a
+              href="https://www.eizo.eu/graphic-monitors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>View Collection</button>
+            </a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-top">
+            <img src="../../../assets/images/brand/logo/EzioLogo2.png" alt="" />
+            <h3>Home Entertainment Monitors</h3>
+            <p>
+              Every home deserves the best entertainment, and our home
+              entertainment monitors are just the perfect choice for that.
+            </p>
+          </div>
+          <div class="service-card-img">
+            <img src="./assets/images/temp/png/display3.png" alt="" />
+          </div>
+          <div class="service-card-btn">
+            <a
+              href="https://www.eizoglobal.com/products/foris/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>View Collection</button>
+            </a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-top">
+            <img src="../../../assets/images/brand/logo/EzioLogo2.png" alt="" />
+            <h3>Medical Monitor Solutions</h3>
+            <p>
+              Explore the best medical monitor solutions from the world’s finest
+              monitor specalists.
+            </p>
+          </div>
+          <div class="service-card-img">
+            <img src="./assets/images/temp/png/display4.png" alt="" />
+          </div>
+          <div class="service-card-btn">
+            <a
+              href="https://www.eizo.eu/medical-monitors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>View Collection</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <img src="../../../assets/images/brand/logo/EzioLogo2.png" alt="" />
+            <h3>Industrial Visual Solutions</h3>
+            <p>
+              Industrial visual solutions provide a guarantee to uplift the
+              industrial experience.
+            </p>
+          </div>
+          <div class="service-card-img">
+            <img src="./assets/images/temp/png/display5.png" alt="" />
+          </div>
+          <div class="service-card-btn">
+            <a
+              href="https://www.eizo.eu/industry"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>View Collection</button>
+            </a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-top">
+            <img src="../../../assets/images/brand/logo/EzioLogo2.png" alt="" />
+            <h3>ATC Visual Display Solutions</h3>
+            <p>
+              Visit our range of end-to-end ATC Visual Systems designed to
+              transfer ATM video data to the controller.
+            </p>
+          </div>
+          <div class="service-card-img">
+            <img src="./assets/images/temp/png/display6.png" alt="" />
+          </div>
+          <div class="service-card-btn">
+            <a
+              href="https://www.eizoglobal.com/solutions/atc/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>View Collection</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-contact-us></app-contact-us>
+</main>

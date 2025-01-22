@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/embed/kmJYu6bYfls?si=4nsnr7TPv0WMXRXr",
+      "date": "19 FEB 2021",
+      "title": "EIZO CG319X 4K HDR Reference Monitor - Review"
+    },
+    {
+      "type": "written",
+      "product": "EIZO CS2740 - An Evaluation by Image Science ",
+      "date": "DEC 2020",
+      "reviewer": "Jeremy Daalder, Image Science",
+      "content": "This 4K Eizo ColorEdge monitor offers excellent quality at a relatively affordable price (~$3000), making it a valuable tool for serious imaging professionals. With a lifespan of 5-10 years, it's a worthwhile investment. However, ensure your computer supports 4K at 60Hz; older systems might struggle with performance at lower refresh rates, leading to frustration."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/embed/i8jWtO3Dq8g?si=_u5yeIr6q45_4-lg",
+      "date": "03 JUN 2021",
+      "title": "Eizo CS2740 - Highest quality 4K 27-inch monitor on the market"
+    }
+  ]
+}

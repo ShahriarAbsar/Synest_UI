@@ -1,0 +1,425 @@
+@import "../../../theme/variables";
+
+/* --- header-second --- */
+.header-second {
+  width: 100%;
+  padding-inline: 21px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 22px;
+  z-index: 111;
+  transition: all 0.12s linear;
+
+  &.active {
+    background-color: #f6f6f6;
+
+    .header-second-child-left {
+      .header-second-logo {
+        img {
+          &.white {
+            display: none;
+          }
+
+          &.black {
+            display: block;
+          }
+        }
+      }
+
+      .header-second-text {
+        h1 {
+          color: #000000;
+        }
+      }
+    }
+
+    .header-second-child-right {
+      button {
+        span {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+
+/* --- header-second-child --- */
+.header-second-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+/* --- header-second-child-left --- */
+.header-second-child-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  grid-gap: 21px;
+
+  .header-second-logo {
+    img {
+      max-width: 137px;
+      width: 100%;
+
+      &.black {
+        display: none;
+      }
+    }
+  }
+
+  .header-second-text {
+    h1 {
+      font-family: $font-en-helvetica;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: -0.011em;
+      text-align: left;
+      color: $color-white;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header-second-child-left {
+    gap: 16px;
+
+    .header-second-logo {
+      img {
+        max-width: 110px;
+      }
+    }
+
+    .header-second-text {
+      h1 {
+        font-size: 22px;
+        line-height: 17px;
+      }
+    }
+  }
+}
+
+@media (max-width: 556px) {
+  .header-second-child-left {
+    gap: 7px;
+
+    .header-second-logo {
+      img {
+        max-width: 66px;
+      }
+    }
+
+    .header-second-text {
+      h1 {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+/* --- header-second-child-right --- */
+.header-second-child-right {
+  button {
+    min-width: 32px;
+    max-width: 32px;
+    height: 23px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    flex-direction: column;
+    gap: 4px;
+
+    span {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 100px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header-second-child-right {
+    button {
+      min-width: 28px;
+      max-width: 28px;
+      height: 19px;
+
+      span {
+        height: 2px;
+      }
+    }
+  }
+}
+
+@media (max-width: 556px) {
+  .header-second-child-right {
+    button {
+      min-width: 26px;
+      max-width: 26px;
+      height: 19px;
+
+      span {
+        height: 2px;
+      }
+    }
+  }
+}
+
+.service-area {
+  padding: calc(92px + 78px) 30px 90px;
+  box-sizing: border-box;
+
+  .service-area-top {
+    text-align: center;
+    margin-bottom: 70px;
+
+    img {
+      max-width: 190px;
+      width: 100%;
+      margin-inline: auto !important;
+      margin-bottom: 45px !important;
+    }
+
+    h3 {
+      color: #000;
+      font-family: halveticaBold;
+      font-size: 34px;
+      font-style: normal;
+      line-height: 119%;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: -0.39px;
+      margin-bottom: 30px !important;
+    }
+
+    p {
+      color: #555;
+      font-family: $font-en-manrope;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 150%;
+      max-width: 800px;
+      margin-inline: auto !important;
+      letter-spacing: -0.22px;
+      margin-bottom: 30px !important;
+    }
+
+    button {
+      background-color: #0071e3;
+      color: $color-white;
+      font-family: $font-en-manrope;
+      font-size: 16px;
+      padding: 8px 25px;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      border-radius: 30px;
+      transition: all 0.3s linear;
+
+      &:hover {
+        background-color: $color-white;
+        color: #000000;
+      }
+    }
+  }
+
+  .service-main {
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 1400px;
+    margin-inline: auto;
+
+    .service-card {
+      background-color: $color-white;
+      padding: 80px 50px 30px 50px;
+      border-radius: 10px;
+
+      transition: all 0.3s linear;
+
+      &:hover {
+        box-shadow: 0px 15px 60px 0 rgb(0 0 0 / 7%);
+      }
+
+      .service-card-top {
+        margin-bottom: 60px;
+        text-align: center;
+
+        img {
+          max-width: 160px;
+          height: 45px;
+          object-fit: contain;
+          margin-inline: auto !important;
+          margin-bottom: 25px !important;
+        }
+
+        h3 {
+          color: #000;
+          font-family: $font-en-manrope;
+          font-size: 25px;
+          line-height: 120%;
+          font-weight: 700;
+          letter-spacing: -0.26px;
+          text-transform: capitalize;
+          margin-bottom: 26px !important;
+        }
+
+        p {
+          color: #6c6c6c;
+          font-family: $font-en-manrope;
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 312px;
+          width: 100%;
+          margin-inline: auto !important;
+          text-align: center;
+          letter-spacing: -0.15px;
+        }
+      }
+
+      .service-card-img {
+        margin-bottom: 40px;
+
+        img {
+          max-width: 327px;
+          width: 100%;
+          transform: scale(1.3);
+          margin-inline: auto;
+        }
+      }
+
+      .service-card-btn {
+        button {
+          background-color: $color-white;
+          padding: 8px 20px;
+          box-sizing: border-box;
+          border-radius: 25px;
+          max-width: 150px;
+          width: 100%;
+          margin-inline: auto;
+          display: block;
+          color: #252525;
+          font-family: $font-en-manrope;
+          font-size: 16px;
+          line-height: 20px;
+          outline: none;
+          border: 1px solid #000;
+          transition: all 0.3s linear;
+
+          &:hover {
+            color: $color-white;
+            border-color: #030303;
+            background-color: #030303;
+          }
+        }
+      }
+    }
+  }
+
+  .service-btn {
+    margin-top: 60px;
+
+    button {
+      background-color: #0071e3;
+      color: $color-white;
+      font-family: $font-en-manrope;
+      font-size: 16px;
+      padding: 8px 25px;
+      box-sizing: border-box;
+      outline: none;
+      display: block;
+      border: none;
+      margin-inline: auto;
+      border-radius: 30px;
+      transition: all 0.3s linear;
+
+      &:hover {
+        background-color: $color-white;
+        color: #0071e3;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .service-area {
+    .service-main {
+      .service-card {
+        padding: 60px 30px 30px 30px;
+
+        .service-card-top {
+          margin-bottom: 35px;
+
+          h3 {
+            margin-bottom: 20px !important;
+          }
+        }
+
+        .service-card-img {
+          img {
+            // height: 260px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .service-area {
+    padding: 128px 20px 70px;
+
+    .service-area-top {
+      margin-bottom: 50px !important;
+
+      img {
+        max-width: 100px;
+        margin-bottom: 20px !important;
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 119%;
+        margin-bottom: 20px !important;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 150%;
+        margin-bottom: 20px !important;
+      }
+
+      button {
+        font-size: 16px;
+      }
+    }
+
+    .service-main {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .service-area {
+    padding: 80px 15px 35px;
+
+    .service-main {
+      .medical-grade-card {
+        padding-bottom: 30px;
+        padding-inline: 20px;
+      }
+    }
+  }
+}

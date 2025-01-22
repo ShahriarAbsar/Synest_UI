@@ -1,0 +1,110 @@
+<app-header-second-security></app-header-second-security>
+<!-- END! header-second 
+
+<!--- START AREA MAIN AREA -->
+<main>
+  <div class="our-service-main-banner-slider">
+    <swiper
+      [speed]="800"
+      [slidesPerView]="1"
+      [navigation]="false"
+      [loop]="false"
+      [autoplay]="false"
+      [spaceBetween]="0"
+      [grabCursor]="true"
+      [pagination]="{
+          clickable: true,
+          }"
+      class="carousel service-carousel-slider"
+    >
+      <ng-template swiperSlide *ngFor="let data of [1]">
+        <div class="our-service-main-banner-slider-card">
+          <div class="our-service-main-banner-slider-card-img">
+            <img
+              src="./assets/images/brand/png/service-two.jpg"
+              alt="service-one"
+            />
+          </div>
+          <!-- END! our-service-main-banner-slider-card-img -->
+
+          <div class="our-service-main-banner-slider-card-details">
+            <div class="container">
+              <div class="our-service-main-banner-slider-card-details-child">
+                <!-- <img src="./assets/images/brand/logo/eizo-logo.png" alt="eizo-logo" /> -->
+                <h1>
+                  Protecting People, Communities, and Businesses with
+                  Cutting-Edge Security Solutions and Services.
+                </h1>
+              </div>
+            </div>
+          </div>
+          <!-- END! our-service-main-banner-slider-card-details -->
+        </div>
+      </ng-template>
+    </swiper>
+
+    <div class="bottom-arrow-button">
+      <button
+        type="button"
+        class="bounce"
+        (click)="scrollHandle('serviceSyNest')"
+      >
+        <img
+          src="./assets/images/brand/icon/arrow-bottom.png"
+          alt="arrow-bottom"
+        />
+      </button>
+    </div>
+  </div>
+
+  <div class="our-service-area" #serviceSyNest>
+    <div class="container">
+      <div class="our-service-area-description">
+        <p>
+          Select from the following categories to explore our state of the art Security Solutions
+        </p>
+      </div>
+
+      <div class="our-service-main">
+        <div class="service-card" routerLink="/security-service-details">
+          <div class="service-card-image">
+            <img src="./assets/images/temp/png/security1.jpeg" alt="" />
+          </div>
+          <!-- END! service-card-image -->
+
+          <div class="service-card-details">
+            <h3>Security & Surveillance</h3>
+            <p>
+              Protecting People, Communities, and Businesses with Cutting-Edge
+              Security Solutions and Services
+            </p>
+            <div class="service-card-btn">
+              <button>Explore</button>
+            </div>
+          </div>
+          <!-- END! service-card-details -->
+        </div>
+
+        <div class="service-card" routerLink="/access-service-details">
+          <div class="service-card-image">
+            <img src="./assets/images/temp/png/security2.jpeg" alt="" />
+          </div>
+          <!-- END! service-card-image -->
+
+          <div class="service-card-details">
+            <h3>Access control</h3>
+            <p>
+              Our Readers: The Perfect Complement to Our Access Control Systems
+            </p>
+            <div class="service-card-btn">
+              <button>Explore</button>
+            </div>
+          </div>
+          <!-- END! service-card-details -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-contact-us></app-contact-us>
+</main>
